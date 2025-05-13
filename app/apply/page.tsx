@@ -93,7 +93,7 @@ const ApplyPage: React.FC<ApplyPageProps> = () => {
         for (let i = 0; i < numberOfBatches; i++) {
             const startDate = new Date(currentStartDate);
             const endDate = new Date(startDate);
-            endDate.setDate(startDate.getDate() + 12); // 11 days for a two-week batch (Mon-Sat)
+            endDate.setDate(startDate.getDate() + 11); // 11 days for a two-week batch (Mon-Sat)
             const batchNumber = 36 + i; // Start from Batch 36
             const batchId = `Batch ${batchNumber}`;
 
@@ -117,7 +117,7 @@ const ApplyPage: React.FC<ApplyPageProps> = () => {
         });
     };
 
-      // UseEffect to calculate batches on component mount
+    // UseEffect to calculate batches on component mount
     useEffect(() => {
         const initialBatches = calculateBatches(6);
         setBatches(initialBatches);
@@ -409,7 +409,7 @@ const ApplyPage: React.FC<ApplyPageProps> = () => {
                                 />
                             )}
                         />
-                         {errors.hod_email && (
+                        {errors.hod_email && (
                             <p className="text-red-500 text-sm mt-1">{errors.hod_email.message}</p>
                         )}
                     </div>

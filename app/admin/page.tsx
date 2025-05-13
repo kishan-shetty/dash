@@ -95,7 +95,7 @@ const AdminDashboard = () => {
 
     return (
         <div className="p-4 md:p-8">
-            <h1 className="text-3xl font-bold mb-4 md:mb-6 text-gray-900 dark:text-white">Candidate Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-4 md:mb-6 text-gray-900 dark:text-white">Admin Dashboard</h1>
 
             {error && (
                 <Alert variant="destructive" className="mb-4 md:mb-6">
@@ -191,3 +191,4 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
